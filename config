@@ -44,6 +44,11 @@ bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 60 -padding 60  -opacit
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# swap caps lock and escape
+exec_always --no-startup-id xmodmap -e "clear lock"
+exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
